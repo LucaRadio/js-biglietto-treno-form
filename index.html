@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-danger">
+    <div class="container bg-light rounded-3 p-5 my-5" >
+        <h1 class="text-center ">Train Ticket</h1>
+        <div class="row justify-content-center">
+            <div class="col-3 text-center fw-bold ">
+                <div class="mb-3">Nome (ex. Gino Paoli)</div>
+                <input class="form-control" name="user-name" placeholder="Nome Cognome"></input>
+            </div>
+            <div class="col-3 text-center fw-bold ">
+                <div class="mb-3">Km da percorrere</div>
+                <input class="form-control" placeholder="Inserisci i km da percorrere" name="kmTrack" id="km-track"></input>
+            </div>
+            <div class="col-3 text-center fw-bold ">
+                <div class="mb-3">Fascia d'età</div>
+                <select name="age-option" class="w-100">
+                    <option value=""></option>
+                    <option id="minor" value="20">Minorenne</option>
+                    <option id="over" value="40">Over 65</option>
+                </select>
+            </div>
+        </div>
+        <div class="generator text-center mt-5">
+            <button class="btn btn-danger rounded-4 me-3" id="generator-btn">Genera</button>
+            <button class="btn btn-light rounded-4" id="cancel">Annulla</button>
+        </div>
+    </div>
+    <div class="container bg-light rounded-3 p-5 my-5 d-none" id="ticket-generator">
+        <div class="row text-center">
+            <div class="col-2 fw-bold text-center bg-dark overflow-hidden">
+                <div class="mb-3 text-danger">Nome:</div>
+                <div id="name-value" class="h2 text-white"></div>
+            </div>
+            <div class="col-2 fw-bold text-center">
+                <div class="mb-3 text-danger">Tipo Biglietto:</div>
+                <div id="ticket-type" class="h2"></div>
+            </div>
+            <div class="col-2 fw-bold text-center">
+                <div class="mb-3 text-danger">N. Biglietto:</div>
+                <div id="ticket-number" class="h2"></div>
+            </div>
+            <div class="col-2 fw-bold text-center">
+                <div class="mb-3 text-danger">Km da percorrere:</div>
+                <div id="km-value" class="h2"></div>
+            </div>
+            <div class="col-4 fw-bold text-center">
+                <div class="mb-3 text-danger">Prezzo Finale</div>
+                <div id="final-price" class="display-5 text-success fw-bold"></div>
+            </div>
+            
+        </div>      
+    </div>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>
